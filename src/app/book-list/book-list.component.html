@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Book List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Theme</th>
+            <th>Prix</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{book.id}} </td>
+            <td> {{book.titre}}</td>
+            <td> {{book.theme}}</td>
+            <td> {{book.prix}}</td>
+            <td>
+              <button (click)="EditBook(book.id)" class="btn btn-success">Modifier</button>
+            <button (click)="deleteBook(book)" class="btn btn-danger">Supprimer</button>
+              <button (click)="bookDetails(book.id)" class="btn btn-info" style="margin-left: 10px">Afficher</button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

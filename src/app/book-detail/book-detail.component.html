@@ -1,0 +1,18 @@
+<h2>Book Details</h2> 
+
+<hr/>
+<div *ngIf="book">
+  <div>
+    <label><b>Book Titre: </b></label> {{book.titre}}
+  </div>
+  <div>
+    <label><b>Book Theme: </b></label> {{book.theme}}
+  </div>
+  <div>
+    <label><b>Book Prix: </b></label> {{book.prix}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à la liste des books</button><br>
